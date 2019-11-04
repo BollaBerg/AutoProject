@@ -22,7 +22,7 @@ function create {
                 echo ""
                 echo "Example of use with flags:"
                 echo "create -ng --root /local/bin/myFolder myProject"
-                return "Please try again"
+                return 11
                 ;;
             -ng|--nogit)
                 USE_GIT=0
@@ -58,17 +58,17 @@ function create {
 
     cd "$PROJECT_NAME"
 
-    # if(($USE_GIT==1))
-    # then
-    #     python3 /mnt/c/Users/andre/Documents/Dev/Scripts/AutoProject/createProject.py $PROJECT_NAME
+    if(($USE_GIT==1))
+    then
+        python3 /mnt/c/Users/andre/Documents/Dev/Scripts/AutoProject/createProject.py $PROJECT_NAME
 
-    #     git init
-    #     git remote add origin https://github.com/BollaBerg/$1.git
-    #     touch README.md
-    #     git add .
-    #     git commit -m "Initial commit"
-    #     git push -u origin master
-    # fi
+        git init
+        git remote add origin https://github.com/BollaBerg/$PROJECT_NAME.git
+        touch README.md
+        git add .
+        git commit -m "Initial commit"
+        git push -u origin master
+    fi
 
     code .
 }
