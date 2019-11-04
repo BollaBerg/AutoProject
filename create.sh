@@ -21,7 +21,7 @@ function create {
                 echo -e "\t-r or --root\tChanges root folder to the next argument. Use at own caution!"
                 echo ""
                 echo "Example of use with flags:"
-                echo "create -ng --root /local/bin/myFolder myProject"
+                echo -e "\tcreate -ng --root /local/bin/myFolder myProject"
                 return 11
                 ;;
             -ng|--nogit)
