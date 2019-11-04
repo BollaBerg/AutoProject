@@ -5,6 +5,7 @@ function create {
     PROJECT_NAME=''
     ROOT_FOLDER='/mnt/c/Users/andre/Documents/Dev/'
     OTHER_ARGUMENTS=()
+    START_FOLDER=$(pwd)
 
     for arg in "$@"
     do
@@ -50,7 +51,9 @@ function create {
         echo "$PROJECT_NAME already exists but is not a directory"
         mkdir "$PROJECT_NAME"
     else
-        return "Directory named $PROJECT_NAME already exists. I do not want to go on!"
+        cd "$START_FOLDER"
+        echo "Directory named $PROJECT_NAME already exists. I do not want to go on!"
+        return 10
     fi
 
     cd "$PROJECT_NAME"
