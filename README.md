@@ -21,11 +21,11 @@ pip install -r requirements.txt
 Change username and directories in the file. This should be in the following places in the code:
 
 | File              | Location | What? |
-|--------           |----------|-------|
-|createProject.py   |line 5    |Github username
-|create.sh          |line 6    |Root folder
-|create.sh          |line 63   |Location of your createProject.py-file
-|create.sh          |line 66   |Github username
+|-------------------|----------|-------|
+|createProject.py   |line 5    |Github username|
+|create.sh          |line 6    |Root folder|
+|create.sh          |line 63   |Location of your createProject.py-file|
+|create.sh          |line 66   |Github username|
 
 #### Source create.sh
 This can either be done manually:
@@ -44,11 +44,13 @@ create projectName
 ```
 
 I have implemented the following flags:
-|Flag       |Input          |Does:
-|-----------|-----------    |--------
-|Help       |-h or --help   |Shows possible flags and examples of use
-|NoGit      |-ng or --nogit |Disables all Git use
-|Root       |-r or --root   |Lets the user choose a different root directory
+
+|Flag       |Input          |Does:|
+|-----------|-----------    |--------|
+|Help       |-h or --help   |Shows possible flags and examples of use|
+|NoGit      |-ng or --nogit |Disables all Git use|
+|Root       |-r or --root   |Lets the user choose a different root directory|
+
 Example with flags:
 ```
 create -ng --root another/destination ProjectName
